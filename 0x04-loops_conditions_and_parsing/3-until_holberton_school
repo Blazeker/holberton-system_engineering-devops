@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script implements the until loop to print 10 times "Holberton School"
+i=0
+until [ $i -gt 9 ]
+    do echo "Holberton School"
+    i=$(( i+1 ))
+done
