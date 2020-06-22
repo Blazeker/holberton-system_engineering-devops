@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Kill me now but more tasty 2.0
+pkill -f 7-highlander
