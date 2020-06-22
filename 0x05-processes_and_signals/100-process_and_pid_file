@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # First advanced exercise
-echo $$ > /var/run/holbertonscript.pid
+touch /var/run/holbertonscript.pid
 while true
 do echo "To infinity and beyond"
     sleep 2
