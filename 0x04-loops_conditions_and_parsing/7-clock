@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script implements a nested loop for the clock time
 j=0
-while ((j <= 13))
+while ((j <= 12))
 do
     echo "Hour: $j"
     i=1
