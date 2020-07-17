@@ -1,5 +1,8 @@
-Network basics
-Server
+- Network basics
+
+- Server
+
+
 Web server
 DNS
 Load balancer
