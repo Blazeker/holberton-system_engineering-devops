@@ -1,5 +1,4 @@
 # Manifest to end a process
-exec { 'killmenow':
-command => 'pkill killmenow',
-path    => 'usr/bin'
+exec { 'pkill killmenow':
+path    => ['/usr/bin', '/usr/sbin',]
 }
