@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# installing and configuring load balancer
+sudo apt-get -y install software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-1.6
+sudo apt-get -y update
+sudo apt-get -y install haproxy=1.6.\*
+sudo echo -e "\nlisten www" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tbind :80" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tbalance roundrobin" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tserver gc-1687-web-01-1596432160 34.74.151.236" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tserver gc-1687-web-02-1597383312 34.75.172.55" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
