@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# debugging
-sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+# Debugging
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
-sudo pkill "nginx"
+echo 1000 > /var/run/nginx.pid
