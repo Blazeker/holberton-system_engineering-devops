@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# command whoami
+#runs command whoami as another user
+
 sudo -u "$1" whoami
