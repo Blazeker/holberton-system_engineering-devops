@@ -11,8 +11,8 @@ if __name__ == "__main__":
     todo_url = "https://jsonplaceholder.typicode.com/"
     user_url = "https://jsonplaceholder.typicode.com/users/"
 
-    url1 = requests.get(todo_url + "todos?userId=" + user_id)
-    url2 = requests.get(user_url + user_id)
+    url1 = requests.get(todo_url + "todos?userId=" + id_employees)
+    url2 = requests.get(user_url + id_employees)
     info_user = url2.json()
     name_employee = info_user[0].get("name")
 
