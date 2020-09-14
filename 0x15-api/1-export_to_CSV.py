@@ -8,15 +8,15 @@ if __name__ == "__main__":
 
     id_employees = argv[1]
     done_tasks = 0
-    file_name = "USER_ID.csv"
+    file_name = id_employees + ".csv"
 
-    todo_url = "https://jsonplaceholder.typicode.com/todos"
-    user_url = "https://jsonplaceholder.typicode.com/users"
+    todo_url = "https://jsonplaceholder.typicode.com/"
+    user_url = "https://jsonplaceholder.typicode.com/users/"
 
-    url1 = requests.get(todo_url, params={'userId': id_employees})
-    url2 = requests.get(user_url, params={'id': id_employees})
+    url1 = requests.get(todo_url + "todos?userId=" + id_employees)
+    url2 = requests.get(user_url + id_employees)
     info_user = url2.json()
-    name_employee = info_user[0].get("name")
+    name_employee = info_user.get("name")
 
     with open(file_name, mode="w", encoding="utf-8") as file:
         writer = csv.writer(file, quoting=csv.QUOTE_NONNUMERIC)
