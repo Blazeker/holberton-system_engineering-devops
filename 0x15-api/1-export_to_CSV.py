@@ -22,5 +22,5 @@ if __name__ == "__main__":
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for i in url1.json():
             writer.writerow([str(i.get("userId")),
-                             name_employee, i.get("completed")),
+                             name_employee, i.get("completed"),
                              i.get("title")])
