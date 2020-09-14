@@ -3,7 +3,6 @@
 
 if __name__ == "__main__":
     import requests
-    import csv
     import json
     from sys import argv
 
@@ -17,7 +16,7 @@ if __name__ == "__main__":
     url1 = requests.get(todo_url + "todos?userId=" + id_employees)
     url2 = requests.get(user_url + id_employees)
     info_user = url2.json()
-    name_employee = info_user[0].get("username")
+    name_employee = info_user.get("username")
     for i in url1.json():
         list_aux.append({"task": i.get("title"),
                          "completed": i.get("completed"),
