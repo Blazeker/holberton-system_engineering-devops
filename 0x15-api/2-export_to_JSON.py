@@ -22,7 +22,7 @@ if __name__ == "__main__":
     for i in url1.json():
         list_aux.append({"task": i.get("title"),
                         "completed": i.get("completed"),
-                        "username": i.get(name_employee)})
+                       "username": i.get(name_employee)})
     dict_aux = {argv[1]: list_aux}
     with open(file_name, mode="w", encoding="utf-8") as file:
         file.write(json.dumps(dict_aux))
