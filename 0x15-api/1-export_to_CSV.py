@@ -16,11 +16,11 @@ if __name__ == "__main__":
     url1 = requests.get(todo_url + "todos?userId=" + id_employees)
     url2 = requests.get(user_url + id_employees)
     info_user = url2.json()
-    name_employee = info_user.get("name")
+    name_employee = info_user.get("username")
 
-    with open(file_name, mode="w", encoding="utf-8") as file:
-        writer = csv.writer(file, quoting=csv.QUOTE_NONNUMERIC)
+    with open(file_name, mode="w") as file:
+        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for i in url1.json():
             writer.writerow([str(i.get("userId")),
-                             name_employee, str(i.get("completed")),
+                             name_employee, i.get("completed")),
                              i.get("title")])
