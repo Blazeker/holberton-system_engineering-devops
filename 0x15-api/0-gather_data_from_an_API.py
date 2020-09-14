@@ -19,7 +19,7 @@ if __name__ == "__main__":
     for tasks in url1.json():
         if tasks.get("completed") is True:
             list_done_tasks.append(tasks)
-    print("Employee {} is done with tasks ({}/{}):".
+    print("Employee {} is done with tasks({}/{}):".
           format(name_employee, len(list_done_tasks), len(url1.json())))
     for tasks in list_done_tasks:
         print("\t {}".format(tasks.get("title")))
