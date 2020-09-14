@@ -8,11 +8,11 @@ if __name__ == "__main__":
     id_employees = argv[1]
     done_tasks = 0
 
-    todo_url = "https://jsonplaceholder.typicode.com/todos"
-    user_url = "https://jsonplaceholder.typicode.com/users"
+    todo_url = "https://jsonplaceholder.typicode.com/"
+    user_url = "https://jsonplaceholder.typicode.com/users/"
 
-    url1 = requests.get(todo_url)
-    url2 = requests.get(user_url, params={'id': id_employees})
+    url1 = requests.get(todo_url + "todos?userId=" + user_id)
+    url2 = requests.get(user_url + user_id)
     info_user = url2.json()
     name_employee = info_user[0].get("name")
 
