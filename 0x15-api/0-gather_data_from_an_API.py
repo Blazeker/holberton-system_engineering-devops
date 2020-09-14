@@ -14,7 +14,7 @@ if __name__ == "__main__":
     url1 = requests.get(todo_url + "todos?userId=" + id_employees)
     url2 = requests.get(user_url + id_employees)
     info_user = url2.json()
-    name_employee = info_user[0].get("name")
+    name_employee = info_user.get("name")
 
     for tasks in url1.json():
         if tasks.get("completed") is True:
