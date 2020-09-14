@@ -19,8 +19,8 @@ if __name__ == "__main__":
         url1 = requests.get(todos_api)
         for i in url1.json():
             list_aux.append({"task": i.get("title"),
-                            "completed": i.get("completed"),
-                            "username": users.get("name")})
+                             "completed": i.get("completed"),
+                             "username": users.get("username")})
         dict_aux[users.get("id")] = list_aux
         list_aux = []
 
