@@ -11,7 +11,7 @@ if __name__ == "__main__":
     file_name = id_employees + ".json"
 
     todo_url = "https://jsonplaceholder.typicode.com/users/"\
-                + sys.argv[1] + "/todos"
+                + id_employees + "/todos"
     user_url = "https://jsonplaceholder.typicode.com/users/"
 
     url1 = requests.get(todo_url)
