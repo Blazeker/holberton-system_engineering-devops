@@ -10,10 +10,11 @@ if __name__ == "__main__":
     list_aux = []
     file_name = id_employees + ".json"
 
-    todo_url = "https://jsonplaceholder.typicode.com/"
+    todo_url = "https://jsonplaceholder.typicode.com/users/"\
+                + sys.argv[1] + "/todos"
     user_url = "https://jsonplaceholder.typicode.com/users/"
 
-    url1 = requests.get(todo_url + "todos?userId=" + id_employees)
+    url1 = requests.get(todo_url)
     url2 = requests.get(user_url + id_employees)
     info_user = url2.json()
     name_employee = info_user.get("username")
